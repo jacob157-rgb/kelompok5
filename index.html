@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Boho Brews</title>
+    <link rel="icon" href="src/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-md bg-transparent p-0">
+            <div class="container-md">
+                <a class="navbar-brand" href="index.html">
+                    <img src="src/logo.png" alt="logo" class="logo-image d-none d-sm-block m-3" width="60" height="60">
+                    <img src="src/logo_sm.png" alt="logo" class="logo-image d-sm-none m-3" width="50" height="50">
+                </a>
+                <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end justify-content-center" tabindex="-1" id="navbarNav">
+                    <div class="offcanvas-header m-3" style="font-family: 'Poppins'; font-weight: 400;">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Boho Brews</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto justify-content-center ms-4 ms-md-0 flex-grow-1"
+                            style="font-family: 'Poppins'; font-weight: 400;">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link m-2 m-md-0">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link text-nowrap m-2 m-md-0">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#menu" class="nav-link m-2 m-md-0">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#product" class="nav-link m-2 m-md-0">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link m-2 m-md-0">Contact</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav justify-content-start">
+                            <div class="row pt-3 pt-md-1">
+                                <div class="col text-start ps-4 ms-3 ps-md-0 ms-md-0">
+                                    <li class="nav-item">
+                                        <button type="button" class="btn position-relative"
+                                            style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0;">
+                                            <img src="src/iconSearch.png" height="30" width="30"></button>
+                                    </li>
+                                </div>
+                                <div class="col text-end pe-4 me-3 pe-md-3 me-md-0">
+                                    <li class="nav-item">
+                                        <button type="button" class="btn position-relative" data-bs-toggle="modal"
+                                            data-bs-target="#cartmodal"
+                                            style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0;">
+                                            <img src="src/iconCart.png" height="30" width="30">
+                                            <span
+                                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                1</span>
+                                        </button>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Nav -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="cartmodal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-light">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
+
+        <!-- Heroes -->
+        <div id="home" class="bg-image justify-content-center">
+            <div class="row align-items-start">
+                <div
+                    class="col-12 col-lg-5 offset-lg-5 col-md-8 offset-md-2 me-md-4 mb-5 mt-0 pb-2 text-end text-md-start">
+                    <h1 class="display-4 text-nowrap" style="font-family: 'DM Serif Display'; font-weight: 400;">
+                        Cangkir
+                        Kecil,
+                        <br>Kebahagiaan Besar.
+                    </h1>
+                    <p class="fs-6 text-nowrap" style="font-family: 'Poppins'; font-weight: 400; font-size: 1rem;">
+                        Dalam
+                        cangkir
+                        kecil, terdapat kekuatan<br>yang mampu membangkitkan<br>semangat di pagi hari.</p>
+                </div>
+            </div>
+        </div>
+        <!-- End Heroes -->
+    </header>
+
+
+    <main class="mt-5">
+        <div class="container">
+            <!-- About -->
+            <section id="about">
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col text-center">
+                            <h3 class="display-5" style="font-family: 'DM Serif Display'; font-weight: 400;">About Us
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row pt-3 pb-5">
+                        <div class="col-lg-6 col-sm-12 pt-3 order-1 order-lg-0">
+                            <p class="fs-6 text-break"
+                                style="font-family: 'Poppins'; font-weight: 400; font-size: 1rem;">
+                                Kami di Boho Brews berdedikasi untuk menyajikan kopi terbaik dan makanan lezat untuk
+                                Anda nikmati.<br>
+                                <br>Dibuka dengan semangat berapi-api, kami ingin menciptakan suasana santai dan nyaman
+                                bagi para pecinta kopi untuk menikmati secangkir kopi sempurna.<br>
+                                <br>Terima kasih telah memilih kami, dan kami berharap dapat menyajikan pengalaman kopi
+                                yang menyenangkan untuk Anda!
+                            </p>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 order-0">
+                            <div class="ratio ratio-16x9">
+                                <img src="src/cup.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End About -->
+
+            <!-- Menu -->
+            <section id="menu">
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col text-center">
+                            <h3 class="display-5" style="font-family: 'DM Serif Display'; font-weight: 400;">Our Menu
+                            </h3>
+                            <p class="fs-6" style="font-family: 'Poppins'; font-weight: 400;">Food and Beverage
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Carousel LG -->
+                    <div class="row py-4 d-none d-md-block">
+                        <div class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Carousel LG 1 -->
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/1capuchino.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Capuchino
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <div class="card">
+                                                    <img src="src/fnb/2croissant.jpg" class="card-img-top"
+                                                        alt="Image 3">
+                                                    <h5 class="card-title text-center pt-1"
+                                                        style="font-family: 'Poppins'; font-weight: 400;">Croissant
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/3latte.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Latte
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel LG 1 -->
+
+                                <!-- Carousel LG 2 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/4coldbrew.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Cold Brew
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <div class="card">
+                                                    <img src="src/fnb/5muffin.jpg" class="card-img-top" alt="Image 3">
+                                                    <h5 class="card-title text-center pt-1"
+                                                        style="font-family: 'Poppins'; font-weight: 400;">Muffin
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/6espresso.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Espresso
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel LG 2 -->
+
+                                <!-- Carousel LG 3 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/7sandwich.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Sandwich
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <div class="card">
+                                                    <img src="src/fnb/8mocha.jpg" class="card-img-top" alt="Image 3">
+                                                    <h5 class="card-title text-center pt-1"
+                                                        style="font-family: 'Poppins'; font-weight: 400;">Mocha
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/9brownies.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Brownies
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel LG 3 -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Carousel LG -->
+
+                    <!-- Carousel SM -->
+                    <div class="row py-4 d-sm-block d-md-none">
+                        <div class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <!-- Carousel SM 1 -->
+                                <div class="carousel-item active" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/1capuchino.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Capuchino
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 1 -->
+
+                                <!-- Carousel SM 2 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/2croissant.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Croissant
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 2 -->
+
+                                <!-- Carousel SM 3 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/3latte.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Latte
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 3 -->
+
+                                <!-- Carousel SM 4 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/4coldbrew.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Cold Brew
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 4 -->
+
+                                <!-- Carousel SM 5 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/5muffin.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Muffin
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 5 -->
+
+                                <!-- Carousel SM 6 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/6espresso.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Espresso
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 6 -->
+
+                                <!-- Carousel SM 7 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/7sandwich.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Sandwich
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 7 -->
+
+                                <!-- Carousel SM 8 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/8mocha.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Mocha
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 8 -->
+
+                                <!-- Carousel SM 9 -->
+                                <div class="carousel-item" data-bs-interval="3000">
+                                    <div class="row">
+                                        <div class="col-md-4 col-12">
+                                            <div class="card">
+                                                <img src="src/fnb/9brownies.jpg" class="card-img-top" alt="Image 3">
+                                                <h5 class="card-title text-center pt-1"
+                                                    style="font-family: 'Poppins'; font-weight: 400;">Brownies
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Carousel SM 9 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Menu -->
+
+            <!-- Product -->
+            <section id="product">
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col text-center">
+                            <h3 class="display-5" style="font-family: 'DM Serif Display'; font-weight: 400;">Our Product
+                            </h3>
+                            <p class="fs-6" style="font-family: 'Poppins'; font-weight: 400;">Beans
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row pt-3 pb-2">
+                        <div class="col-6 col-md-3 pb-4 pb-md-0">
+                            <div class="card">
+                                <img src="src/product/arabica.jpg" class="card-img-top" alt="arabica">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 pb-4 pb-md-0">
+                            <div class="card">
+                                <img src="src/product/robusta.jpg" class="card-img-top" alt="robusta">
+                                <div class="card-body">
+                                    <h4 class="card-title">Roubusta</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="card">
+                                <img src="src/product/civet.jpg" class="card-img-top" alt="civet">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Civet</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="card">
+                                <img src="src/product/gayo.jpg" class="card-img-top" alt="gayo">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Gayo</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-half" style="color: gold;"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-3">
+                        <div class="col-6 col-md-3 pb-4 pb-md-0">
+                            <div class="card">
+                                <img src="src/product/jbm.jpg" class="card-img-top" alt="jamaica">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Jamaica</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3 pb-4 pb-md-0">
+                            <div class="card">
+                                <img src="src/product/mandheling.jpg" class="card-img-top" alt="mandheling">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Mandheling</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-half" style="color: gold;"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="card">
+                                <img src="src/product/toraja.jpg" class="card-img-top" alt="toraja">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Toraja</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-half" style="color: gold;"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-3">
+                            <div class="card">
+                                <img src="src/product/wamena.jpg" class="card-img-top" alt="wamena">
+                                <div class="card-body">
+                                    <h4 class="card-title">Arabica Wamena</h4>
+                                    <p>200gr</p>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-fill" style="color: gold;"></i>
+                                    <i class="bi bi-star-half" style="color: gold;"></i>
+                                    <p><br>Rp50.000</p>
+                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Product -->
+
+            <!-- Contact -->
+            <section id="contact">
+                <div class="container">
+                    <div class="row py-4">
+                        <div class="col text-center">
+                            <h3 class="display-5" style="font-family: 'DM Serif Display'; font-weight: 400;">Contact
+                            </h3>
+                            <p class="fs-6" style="font-family: 'Poppins'; font-weight: 400;">Let's Connect
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row pt-3 pb-5">
+                        <div class="col-12 col-md-6">
+                            <div class="ratio ratio-4x3">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8673755991013!2d106.96736337452768!3d-6.281160493707691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d36614e326f%3A0x9d9e56d46b68bc67!2sBoho%20Coffee%20%26%20Kitchen!5e0!3m2!1sid!2sid!4v1685697380888!5m2!1sid!2sid"
+                                    allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 pt-2 pt-md-0">
+                            <form name="contact-form">
+                                <div class="mb-3" data-aos="fade-right">
+                                    <label for="name" class="form-label">Nama</label>
+                                    <input type="text" class="form-control" id="name" aria-describedby="name"
+                                        name="nama">
+                                </div>
+                                <div class="mb-3" data-aos="fade-left">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" aria-describedby="email"
+                                        name="email">
+                                </div>
+                                <div class="mb-3" data-aos="fade-right">
+                                    <label for="pesan" class="form-label">Pesan</label>
+                                    <textarea class="form-control" id="pesan" rows="5" name="pesan"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-light btn-send" data-aos="fade-up-right">Send <i
+                                        class="bi bi-send"></i> </button>
+                                <button class="btn btn-light btn-load d-none" type="button" disabled>
+                                    <span class="spinner-border spinner-border-sm" role="status"
+                                        aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Contact -->
+        </div>
+    </main>
+
+    <footer class="text-center text-white" style="background-color: #000000;">
+        <!-- Grid container -->
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <a href="https://www.facebook.com" style="color: white; padding-left: 10px; padding-right: 10px"><i
+                        class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com" style="color: white; padding-left: 10px; padding-right: 10px"><i
+                        class="bi bi-instagram"></i></a>
+                <a href="https://www.twitter.com" style="color: white; padding-left: 10px; padding-right: 10px"><i
+                        class="bi bi-twitter"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright :
+            <a class="text-light" href="https://www.instagram.com/liem_xiao/">Reserved</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.js"
+        integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
