@@ -17,6 +17,30 @@
   height: 100%;
   border: none;
 }
+.image-cart {
+  width: 125px;
+  height: 125px;
+}
+.bi.bi-plus {
+  color: white;
+}
+.bi.bi-dash {
+  color: white;
+}
+.bi.bi-trash {
+  color: white;
+}
+.modal-title {
+  margin-left: 10px;
+  font-family: "Poppins";
+  font-weight: 400;
+}
+.modal-body {
+  font-family: "Poppins";
+}
+.modal-footer {
+  font-family: "Poppins";
+}
 @media screen and (max-width: 576px) {
   .bg-image {
     min-height: 100vh;

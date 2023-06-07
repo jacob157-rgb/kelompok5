@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script src="cart.js" async></script>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -69,7 +70,7 @@
                                             data-bs-target="#cartmodal"
                                             style="--bs-btn-padding-y: 0; --bs-btn-padding-x: 0;">
                                             <img src="src/iconCart.png" height="30" width="30">
-                                            <span
+                                            <span id="jumlahitem"
                                                 class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                 1</span>
                                         </button>
@@ -85,18 +86,26 @@
 
         <!-- Modal -->
         <div class="modal fade" id="cartmodal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Your Cart</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-
+                    <div id="cart" class="modal-body">
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-light">Checkout</button>
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-6 text-start">
+                                    <h3 class="fs-5">Total : </h3>
+                                    <h3 id="total" class="fs-6">0</h3>
+                                </div>
+                                <div class="col-6 text-end pe-2">
+                                    <button type="button" class="btn btn-light">Checkout</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -445,8 +454,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -462,8 +471,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -479,8 +488,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -496,8 +505,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-half" style="color: gold;"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -514,8 +523,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -531,8 +540,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-half" style="color: gold;"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -548,8 +557,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-half" style="color: gold;"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -565,8 +574,8 @@
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-fill" style="color: gold;"></i>
                                     <i class="bi bi-star-half" style="color: gold;"></i>
-                                    <p><br>Rp50.000</p>
-                                    <a href="#" class="btn btn-light text-dark">Add to Cart</a>
+                                    <p class="price"><br>Rp50.000</p>
+                                    <a href="#" id="addToCartBtn" class="btn btn-light text-dark">Add to Cart</a>
                                 </div>
                             </div>
                         </div>
@@ -620,14 +629,14 @@
                                 </button>
                             </form>
                             <!-- Success Alert -->
-                            <div id="a-success" class="alert alert-success alert-dismissible fade show d-none"
+                            <div id="a-success" class="alert alert-success alert-dismissible fade show d-none pt-2"
                                 role="alert">
                                 <strong>Terimakasih!</strong> Pesan anda telah diterima.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"
                                     aria-label="Close"></button>
                             </div>
                             <!-- Error Alert -->
-                            <div id="a-error" class="alert alert-danger alert-dismissible fade show d-none"
+                            <div id="a-error" class="alert alert-danger alert-dismissible fade show d-none pt-2"
                                 role="alert">
                                 <strong>Oops!</strong> Something went wrong, Try Again.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert"

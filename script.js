@@ -1,3 +1,4 @@
+// EmailJS //
 (function () {
   emailjs.init("3dHGHFhvDMh-UJ_fA");
 })();
@@ -29,3 +30,4 @@ window.onload = function () {
     );
   });
 };
+// Email JS End //
