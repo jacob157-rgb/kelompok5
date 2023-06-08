@@ -30,6 +30,12 @@
 .bi.bi-trash {
   color: white;
 }
+.bi.bi-star-fill {
+  color: gold;
+}
+.bi.bi-star-half {
+  color: gold;
+}
 .modal-title {
   margin-left: 10px;
   font-family: "Poppins";
