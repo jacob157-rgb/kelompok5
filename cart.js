@@ -56,10 +56,26 @@ function addToCart(product) {
   updatetotal();
 }
 
+function addedToCart() {
+  var alert = document.getElementById("a-added");
+  alert.classList.remove("d-none");
+  alert.classList.add("slide-down");
+
+  setTimeout(function () {
+    alert.classList.add("slide-up");
+  }, 2000);
+
+  setTimeout(function () {
+    alert.classList.add("d-none");
+    alert.classList.remove("slide-down", "slide-up");
+  }, 2300);
+}
+
 var addToCartBtns = document.querySelectorAll("#addToCartBtn");
 
 addToCartBtns.forEach(function (btn) {
   btn.addEventListener("click", function (event) {
+    addedToCart();
     event.preventDefault();
     var product = {
       image: btn.closest(".card").querySelector("img").src,
